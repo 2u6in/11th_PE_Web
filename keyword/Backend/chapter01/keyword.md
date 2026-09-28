@@ -46,16 +46,16 @@
 
     - **One to one : 1 대 1 대응**
 
-![1.png](1.png)
+![1.png](images/1.png)
 
     - **One to many : 1 대 N 대응**
 
-![2.png](2.png)
+![2.png](images/2.png)
 
     - **Many to many : N 대 M 대응**
         - 2개의 엔티티만으로는 표현이 어렵기 때문에 주로 **추가로 매핑 테이블을 두고 각각의 PK를 FK로 가져서 해결**
 
-![3.png](3.png)
+![3.png](images/3.png)
 
 - 연관관계란? 그리고 연관관계를 설정하는 방법은?
 

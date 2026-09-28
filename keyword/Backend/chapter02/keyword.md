@@ -44,7 +44,7 @@ WHERE: 반납일이 반납 예정일보다 늦음 / ORDER BY: 반납일 순 / LI
 
 ### **LEFT JOIN**
 
-![image.png](image.png)
+![image.png](images/image.png)
 
 왼쪽 테이블의 모든 데이터를 유지하고 오른쪽 테이블에서는 왼쪽 테이블과 일치하는 데이터 값만 붙인다 일치하는게 없다면 NULL
 
