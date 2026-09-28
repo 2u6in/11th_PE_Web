@@ -1,18 +1,18 @@
-![erd(3).png](erd%283%29.png)
+![erd(3).png](images/erd%283%29.png)
 
 **01_schema.sql·02_seed.sql 실행 확인 화면**
 
-![1.png](1.png)
+![1.png](images/1.png)
 
 **미션 1.**
 
-![2.png](2.png)
+![2.png](images/2.png)
 
 기준 테이블은 book이며 책의 **카테고리 이름을 함께 조회하기 위해** category 테이블을 category_id 로 JOIN함 WHERE절에서 **문학 카테고리이면서 현재 대여 가능한 책**만 조회하고, book_id를 내림차순으로 정렬해 최근 등록된 책부터 최대 10개만 가져옴
 
 **미션 2.**
 
-![3.png](3.png)
+![3.png](images/3.png)
 
 기준 테이블은 rental이며 대여 정보와 함께 책 제목을 가져오기 위해 book 테이블을 book_id로 JOIN함
 
@@ -20,7 +20,7 @@ WHERE절에서 1번 사용자가 대여했고 아직 반납하지 않은 책만 
 
 **미션 3.**
 
-![4.png](4.png)
+![4.png](images/4.png)
 
 기준 테이블은 book이며 책에 연결된 태그를 조회하기 위해 book_tag와 tag 테이블을 JOIN함
 

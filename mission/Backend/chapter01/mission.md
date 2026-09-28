@@ -1,4 +1,4 @@
-![erd.png](erd.png)
+![erd.png](images/erd.png)
 
 설명
 
