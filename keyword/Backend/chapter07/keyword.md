@@ -246,6 +246,26 @@
     - jwtUtil.getMemberId()에서 서명과 만료 시간을 검증하고 사용자 ID 추출
     - request.setAttribute()로 사용자 ID를 요청에 저장
     - true를 반환하면 컨트롤러 실행
+  - 인터셉터 적용 경로 등록
+
+    ```java
+    @Configuration
+    @RequiredArgsConstructor
+    public class WebConfig implements WebMvcConfigurer {
+    
+        private final AuthInterceptor authInterceptor;
+    
+        @Override
+        public void addInterceptors(InterceptorRegistry registry) {
+            registry.addInterceptor(authInterceptor)
+                    .addPathPatterns("/me");
+        }
+    }
+    ```
+
+    - AuthInterceptor를 @Component로 빈에 등록한 뒤, WebMvcConfigurer의 addInterceptors()에서 **어떤 URL에 적용할지** 지정한다
+    - addPathPatterns()는 인터셉터를 실행할 경로를 지정한다. 위 예시에서는 /me 요청이 들어오면 컨트롤러 실행 전에 preHandle()이 JWT를 검사한다.
+    - excludePathPatterns()는 적용 범위에 포함된 경로 중에서 일부를 제외할 때 사용한다. 예를 들어 addPathPatterns("/**")로 넓게 적용했다면 로그인이나 Swagger 경로를 여기서 제외할 수 있다.
   - 컨트롤러 사용
 
       ```java
